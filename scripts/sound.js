@@ -162,6 +162,18 @@ function Sound(source) {
             title: "Grass Walk",
             url: "https://soundcloud.com/tracyjohnson/grass-walk-06"
         }
+        'Adventure_Island': {
+            path: "music/Adventure_Island.mp3",
+            artist: "",
+            title: "Adventure Island area 1",
+            url: "https://soundcloud.com/elsrm2/adventure-island-area-1-round"
+        }
+        'Kungfu': {
+            path: "music/Yie_Ar_Kung_Fu.mp3",
+            artist: "",
+            title: "Yie Ar Kung Fu",
+            url: "https://soundcloud.com/elsrm2/yie-ar-kung-fu-fight-theme"
+        }
     };
 
     this.defaultTracks = [ // (not currently used, as all levels now have explicit tracks)
