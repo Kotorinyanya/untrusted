@@ -6,17 +6,12 @@
 }
 #END_PROPERTIES#
 /*************
- * ambush.js *
+ * droneArmy.js *
  *************
  *
- * Oh. Oh, I see. This wasn't quite part of the plan.
+ * You can not fight an army with a single man, can you?
+ * All the drone should be deactivated by the M A G I C.
  *
- * Looks like they won't let you take the Algorithm
- * without a fight. You'll need to carefully weave your
- * way through the guard drones.
- *
- * Well, time to improvise. Let's mess with their programming
- * a little, shall we?
  */
 
 function startLevel(map) {
@@ -52,8 +47,9 @@ function startLevel(map) {
             player.killedBy('an attack drone');
         },
         'behavior': function (me) {
-        #BEGIN_EDITABLE#
             moveToward(me, 'player');
+#BEGIN_EDITABLE#
+
 #END_EDITABLE#
         }
     });
@@ -66,7 +62,7 @@ function startLevel(map) {
             player.killedBy('a reinforcement drone');
         },
         'behavior': function (me) {
-        #BEGIN_EDITABLE#
+#BEGIN_EDITABLE#
             me.move('left');
 #END_EDITABLE#
         }
@@ -79,45 +75,48 @@ function startLevel(map) {
         'onCollision': function (player) {
             player.killedBy('a defense drone');
         },
-        'behavior': function (me) {
-        #BEGIN_EDITABLE#
+        'behavior': function (me) {},
+#BEGIN_EDITABLE#
 
-        #END_EDITABLE#
-        }
+#END_EDITABLE#
     });
 
-    // just for decoration
-    map.defineObject('water', {
-        'symbol': '░',
-        'color': '#44f'
-    });
 
     map.placePlayer(0, 12);
 
-    for (var x = 0; x < map.getWidth(); x++) {
-        map.placeObject(x, 10, 'block');
-        map.placeObject(x, 14, 'block');
-
-        for (var y = 20; y < map.getHeight(); y++) {
-            map.placeObject(x, y, 'water');
+    for(var j = 25; j <= 30; j++) {
+        for (var i = 0; i <= 2; i++) {
+            if (i !== 12 || j !== map.getWidth() - 1) {
+                map.placeObject(j, i, 'attackDrone');
+            }
         }
     }
 
-    map.placeObject(23, 11, 'attackDrone');
-    map.placeObject(23, 12, 'attackDrone');
-    map.placeObject(23, 13, 'attackDrone');
+    for(var j = 25; j <= 30; j++) {
+        for (var i = map.getHeight() - 3; i <= map.getHeight(); i++) {
+            if (i !== 12 || j !== map.getWidth() - 1) {
+                map.placeObject(j, i, 'attackDrone');
+            }
+        }
+    }
 
-    map.placeObject(27, 11, 'defenseDrone');
-    map.placeObject(27, 12, 'defenseDrone');
-    map.placeObject(27, 13, 'defenseDrone');
 
-    map.placeObject(24, 11, 'reinforcementDrone');
-    map.placeObject(25, 11, 'reinforcementDrone');
-    map.placeObject(26, 11, 'reinforcementDrone');
-    map.placeObject(24, 13, 'reinforcementDrone');
-    map.placeObject(25, 13, 'reinforcementDrone');
-    map.placeObject(26, 13, 'reinforcementDrone');
+    for(var j = map.getWidth() - 13; j <= map.getWidth() - 12; j++) {
+        for (var i = 4; i <= 20; i++) {
+            if (i !== 12 || j !== map.getWidth() - 1) {
+                map.placeObject(j, i, 'reinforcementDrone');
+            }
+        }
+    }
 
+
+    for(var j = map.getWidth() - 8; j <= map.getWidth() - 1; j++) {
+        for (var i = 7; i <= 17; i++) {
+            if (i !== 12 || j !== map.getWidth() - 1) {
+                map.placeObject(j, i, 'defenseDrone');
+            }
+        }
+    }
     map.placeObject(map.getWidth()-1, 12, 'exit');
 #END_OF_START_LEVEL#
 }
