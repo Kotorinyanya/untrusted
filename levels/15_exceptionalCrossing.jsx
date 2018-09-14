@@ -2,7 +2,7 @@
 {
     "version": "1.2",
     "commandsIntroduced": [],
-    "music": "Kungfu",
+    "music": "The_Waves_Call_Her_Name",
     "startingMessage": "You have lost the Algorithm!"
 }
 #END_PROPERTIES#

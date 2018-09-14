@@ -2,7 +2,7 @@
 {
     "version": "1.2.1",
     "commandsIntroduced": ["map.setSquareColor"],
-    "music": "Contra"
+    "music": "cloudy_sin"
 }
 #END_PROPERTIES#
 /******************
