@@ -39,7 +39,7 @@ function startLevel(map) {
 #START_OF_START_LEVEL#
 	map.defineObject('boss', {
         'type': 'dynamic',
-        'symbol': '@',
+        'symbol': '🐒',
         'color': 'red',
         'interval': 200,
         'onCollision': function (player) {
