@@ -2,7 +2,7 @@
 {
     "version": "1.2",
     "commandsIntroduced": ["map.getAdjacentEmptyCells"],
-    "music": "Searching"
+    "music": "Adventure_Island"
 }
 #END_PROPERTIES#
 /*

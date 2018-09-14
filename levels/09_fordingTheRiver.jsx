@@ -3,7 +3,7 @@
     "version": "1.2",
     "commandsIntroduced":
         ["player.killedBy", "object.onCollision"],
-    "music": "The_Waves_Call_Her_Name"
+    "music": "Pvz"
 }
 #END_PROPERTIES#
 /**********************
