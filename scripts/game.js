@@ -111,26 +111,33 @@ function Game(debugMode, startLevel) {
 
         // Initialize editor, map, and objects and playerId
         this._playerId = "";
-        var forbiddenIdList = ['root', 'null', 'admin', 'administrator', ' ', '  ', '   '];
+        var forbiddenIdList = ['root', 'null', 'admin', 'system', 'administrator', 'aaa', 'asd', 'asdf'];
 
-        function check_playerId(id) {
-            if (id === "") {
+        function checkPlayerId(userName) {
+            if (userName === "") {
                 return false;
-            } else if (forbiddenIdList.indexOf(id) >= 0) {
-                prompt("No " + id + " !");
+            } else if (forbiddenIdList.indexOf(userName) >= 0) {
+                prompt("No " + userName + " !");
                 return false
-            } else if (id) {
+            } else if (checkUserName(userName)) {
                 return true;
             } else {
                 return false;
             }
         }
 
+        function checkUserName(s)
+        {
+            var patrn=/^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){2,19}$/;
+            if (!patrn.exec(s)) return false
+            return true
+        }
+
         while (true) {
-            if (check_playerId(this._playerId)) {
+            if (checkPlayerId(this._playerId)) {
                 break;
             } else {
-                this._playerId = prompt("Player name: \n Note: Please use your favorite name instead of 'root' or 'null' etc.", "");
+                this._playerId = prompt("Player name: \n 请输入长度3-20的玩家昵称，不能以数字开头，不含特殊字符", "");
             }
         }
         this.editor = new CodeEditor("editor", 600, 500, this);
