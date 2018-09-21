@@ -143,31 +143,31 @@ function Sound(source) {
             artist: "",
             title: "KOTOKO - 恋ひ恋ふ縁",
             url: "http://music.163.com/#/m/song?id=473403182"
-        }
+        },
         'Mario': {
             path: "music/Super_Mario_Bros_Theme_Song.mp3",
             artist: "",
             title: "Super Mario Bros",
             url: "https://soundcloud.com/paulo-siqueira/super-mario-bros-theme-song"
-        }
+        },
         'Contra': {
             path: "music/CONTRA_-_The_Jungle.mp3",
             artist: "",
             title: "The Jungle",
             url: "https://soundcloud.com/stellardreamsmusic/the-jungle"
-        }
+        },
         'Pvz': {
             path: "music/Grass_Walk.mp3",
             artist: "",
             title: "Grass Walk",
             url: "https://soundcloud.com/tracyjohnson/grass-walk-06"
-        }
+        },
         'Adventure_Island': {
             path: "music/Adventure_Island.mp3",
             artist: "",
             title: "Adventure Island area 1",
             url: "https://soundcloud.com/elsrm2/adventure-island-area-1-round"
-        }
+        },
         'Kungfu': {
             path: "music/Yie_Ar_Kung_Fu.mp3",
             artist: "",
