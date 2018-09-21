@@ -111,7 +111,7 @@ function Game(debugMode, startLevel) {
 
         // Initialize editor, map, and objects and playerId
         this._playerId = "";
-        var forbiddenIdList = ['root', 'null', 'admin', 'administrator'];
+        var forbiddenIdList = ['root', 'null', 'admin', 'administrator', ' ', '  ', '   '];
 
         function check_playerId(id) {
             if (id === "") {
