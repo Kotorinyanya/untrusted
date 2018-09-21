@@ -5,7 +5,7 @@
         ["global.startLevel", "global.onExit", "map.placePlayer",
          "map.placeObject", "map.getHeight", "map.getWidth",
          "map.displayChapter", "map.getPlayer", "player.hasItem"],
-    "music": "The Green"
+    "music": "Mario"
 }
 #END_PROPERTIES#
 /*****************
