@@ -54,7 +54,7 @@ function startLevel(map) {
         'behavior': function (me) {
         #BEGIN_EDITABLE#
             moveToward(me, 'player');
-#END_EDITABLE#
+        #END_EDITABLE#
         }
     });
 
@@ -68,7 +68,7 @@ function startLevel(map) {
         'behavior': function (me) {
         #BEGIN_EDITABLE#
             me.move('left');
-#END_EDITABLE#
+        #END_EDITABLE#
         }
     });
 
