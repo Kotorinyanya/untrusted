@@ -52,9 +52,9 @@ function startLevel(map) {
             player.killedBy('an attack drone');
         },
         'behavior': function (me) {
-        #BEGIN_EDITABLE#
+#BEGIN_EDITABLE#
             moveToward(me, 'player');
-        #END_EDITABLE#
+#END_EDITABLE#
         }
     });
 
@@ -66,9 +66,9 @@ function startLevel(map) {
             player.killedBy('a reinforcement drone');
         },
         'behavior': function (me) {
-        #BEGIN_EDITABLE#
+#BEGIN_EDITABLE#
             me.move('left');
-        #END_EDITABLE#
+#END_EDITABLE#
         }
     });
 
@@ -80,9 +80,9 @@ function startLevel(map) {
             player.killedBy('a defense drone');
         },
         'behavior': function (me) {
-        #BEGIN_EDITABLE#
+#BEGIN_EDITABLE#
 
-        #END_EDITABLE#
+#END_EDITABLE#
         }
     });
 
