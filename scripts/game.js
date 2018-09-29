@@ -114,7 +114,7 @@ function Game(debugMode, startLevel) {
         var forbiddenIdList = ['root', 'null', 'admin', 'system', 'administrator', 'aaa', 'asd', 'asdf'];
 
         function checkPlayerId(userName) {
-            if (userName === "") {
+            if (userName === "" || userName === null) {
                 return false;
             } else if (forbiddenIdList.indexOf(userName) >= 0) {
                 prompt("No " + userName + " !");
@@ -126,20 +126,16 @@ function Game(debugMode, startLevel) {
             }
         }
 
-        function checkUserName(s)
-        {
-            var patrn=/^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){2,19}$/;
+        function checkUserName(s) {
+            var patrn = /^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){2,19}$/;
             if (!patrn.exec(s)) return false
             return true
         }
 
-        while (true) {
-            if (checkPlayerId(this._playerId)) {
-                break;
-            } else {
-                this._playerId = prompt("Player name: \n 请输入长度3-20的玩家昵称，不能以数字开头，不含特殊字符", "");
-            }
+        while (checkPlayerId(this._playerId) === false) {
+            this._playerId = prompt("Player name: \n 请输入长度3-20的玩家昵称，不能以数字开头，不含特殊字符");
         }
+        console.log(this._playerId);
         this.editor = new CodeEditor("editor", 600, 500, this);
         this.map = new Map(this.display, this);
         this.objects = this.getListOfObjects();
